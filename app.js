@@ -48,6 +48,13 @@ function calculateResults(){
 
 // Show Error
 function showError(error){
+
+    // Show results
+    document.getElementById('results').style.display = 'none';
+
+    // Hide loader
+    document.getElementById('loading').style.display = 'none';
+
     // Create a div
     const errorDiv = document.createElement('div');
   
@@ -66,6 +73,8 @@ function showError(error){
   
     // Clear error after 3 seconds
     setTimeout(clearError, 3000);
+
+    
   }
   
   // Clear error
